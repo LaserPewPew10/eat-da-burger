@@ -17,3 +17,9 @@ li {
 .form-group {
   margin-bottom: 5px;
 }
+
+.container {
+  text-align: center;
+  background-image: url("https://images.pexels.com/photos/1848976/pexels-photo-1848976.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260");
+  background-size: 100%;
+}

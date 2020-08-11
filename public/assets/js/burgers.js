@@ -42,30 +42,6 @@ $(function () {
     });
   });
 
-  $(".modify-form").on("submit", function (event) {
-    // Make sure to preventDefault on a submit event.
-    event.preventDefault();
-
-    var id = $("[name=id]").val().trim();
-    console.log(id);
-    var newIngredients = $(".modify-form [name=ingredients]").val().trim();
-    console.log(newIngredients);
-
-    var updatedBurger = {
-      ingredients: newIngredients,
-    };
-
-    // Send the PUT request.
-    $.ajax("/api/burgers/ingredients/" + id, {
-      type: "PUT",
-      data: updatedBurger,
-    }).then(function () {
-      console.log("added new burger ingredients");
-      // Reload the page to get the updated list
-      location.reload();
-    });
-  });
-
   $(".delete-burger").on("click", function (event) {
     var id = $(this).data("burgerid");
     console.log(id);
